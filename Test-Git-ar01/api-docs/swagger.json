@@ -1,0 +1,17 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "",
+    "version" : "1.0.0",
+    "title" : "test-git-ar01"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/test-git-ar01",
+  "schemes" : [ "https", "http" ],
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/newPath1" : { }
+  },
+  "definitions" : { }
+}
