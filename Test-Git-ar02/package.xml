@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zosConnectApi xmlns="http://www.ibm.com/zosConnect/2.0/zosConnectApi" id="test-git-ar02">
-    <apiSpec title="test-git-ar02" basePath="/test-git-ar02" description="test git updates" version="1.0.4">
+    <apiSpec title="test-git-ar02" basePath="/test-git-ar02" description="test git updates" version="1.0.4 Alwyn">
         <path relativePath="/newPath1">
             <method type="POST"/>
             <method type="GET"/>

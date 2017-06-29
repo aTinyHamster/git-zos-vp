@@ -2,7 +2,7 @@
   "swagger" : "2.0",
   "info" : {
     "description" : "test git updates",
-    "version" : "1.0.4",
+    "version" : "1.0.4 Alwyn",
     "title" : "test-git-ar02"
   },
   "host" : "localhost:8080",
