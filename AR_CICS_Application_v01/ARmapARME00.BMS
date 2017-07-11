@@ -1,0 +1,184 @@
+* +++ *--1----+----2----+----3----+----4----+----5----+----6----+----7  CDS2011
+* +++ *-ENH-        -04/09- ENH - MULTI-SCHEME PRODUCT DEFINITION       CDS2011
+* +++ *-453-        - 2008- RELEASE 8.25                                CDS2011
+* +++ *-   -        - FDI - PROJECT # 8523                              CDS2011
+* +++ *-   -        -     -                                             CDS2011
+* +++ *--1----+----2----+----3----+----4----+----5----+----6----+----7  CDS2011
+*     *       RELEASE DATE=05/17/02.        REVISION LEVEL=08.09      * 00000001
+*     ***************************************************************** 00000002
+*     *WARNING.  THIS COMPUTER PROGRAM IS PROTECTED BY COPYRIGHT LAW  * 00000003
+*     *AND INTERNATIONAL TREATIES.  UNAUTHORIZED REPRODUCTION OR      * 00000004
+*     *DISTRIBUTION OF THIS PROGRAM, OR ANY PORTION OF IT, MAY RESULT * 00000005
+*     *IN SEVERE CIVIL AND CRIMINAL PENATLIES, AND WILL BE PROSECUTED * 00000006
+*     *TO THE MAXIMUM EXTENT POSSIBLE UNDER THE LAW.                  * 00000007
+*     *COPYRIGHT 1999 PAYSYS INTERNATIONAL, INC.  ALL RIGHTS RESERVED.* 00000008
+*     ***************************************************************** 00000009
+ARME     DFHMSD                                                        X00000100
+               TYPE=&SYSPARM,                                          X00000200
+               LANG=COBOL,                                             X00000300
+               CTRL=(FREEKB,FRSET),                                    X00000400
+               DATA=FIELD,                                             X00000500
+               MODE=INOUT,                                             X00000600
+               TERM=3270,                                              X00000700
+               STORAGE=AUTO,                                           X00000800
+               TIOAPFX=YES                                              00000900
+*********************************************************************** 00001000
+ARME00   DFHMDI                                                        X00001100
+               COLUMN=1,                                               X00001200
+               DATA=FIELD,                                             X00001300
+               JUSTIFY=(LEFT,FIRST),                                   X00001400
+               SIZE=(24,80),                                           X00001500
+               LINE=1,                                                 X00001600
+               TIOAPFX=YES                                              00001700
+*********************************************************************** 00001800
+TTN0101  DFHMDF POS=(01,01),                                           X00001900
+               LENGTH=04,                                              X00002000
+               ATTRB=(ASKIP,NORM),                                     X00002100
+               INITIAL='ARME'                                           00002200
+TTN0106  DFHMDF POS=(01,06),                                           X00002300
+               LENGTH=01,                                              X00002400
+               ATTRB=(ASKIP,NORM),                                     X00002500
+               INITIAL='('                                              00002600
+TTN0108  DFHMDF POS=(01,08),                                           X00002700
+               LENGTH=04,                                              X00002800
+               ATTRB=(UNPROT,NORM,IC)                                   00002900
+TTN0113  DFHMDF POS=(01,13),                                           X00003000
+               LENGTH=01,                                              X00003100
+               ATTRB=(ASKIP,NORM),                                     X00003200
+               INITIAL=')'                                              00003300
+TTN0125  DFHMDF POS=(01,25),                                           X00003400
+               LENGTH=30,                                              X00003500
+               ATTRB=(ASKIP,NORM),                                     X00003600
+               INITIAL='                              '                 00003700
+TTN0157  DFHMDF POS=(01,57),                                           X00003800
+               LENGTH=04,                                              X00003900
+               ATTRB=(ASKIP,NORM),                                     X00004000
+               INITIAL='PAGE'                                           00004100
+TTN0162  DFHMDF POS=(01,62),                                           X00004200
+               LENGTH=02,                                              X00004300
+               ATTRB=(UNPROT,NUM,NORM),                                X00004400
+               PICIN='99',                                             X00004500
+               PICOUT='99'                                              00004600
+TTN0165  DFHMDF POS=(01,65),                                           X00004700
+               LENGTH=03,                                              X00004800
+               ATTRB=(ASKIP,NORM)                                       00004900
+TTN0169  DFHMDF POS=(01,69),                                           X00005000
+               LENGTH=10,                                              X00005100
+               ATTRB=(ASKIP,NORM),                                     X00005200
+               INITIAL='          '                                     00005300
+TTN0220  DFHMDF POS=(02,20),                                           X00005400
+               LENGTH=40,                                              X00005500
+               ATTRB=(ASKIP,NORM),                                     X00005600
+               INITIAL='           ACCOUNT EMBOSSING            '       00005700
+TTN0269  DFHMDF POS=(02,69),                                           X00005800
+               LENGTH=08,                                              X00005900
+               ATTRB=(ASKIP,NORM),                                     X00006000
+               INITIAL='        '                                       00006100
+ME00401  DFHMDF POS=(04,01),                                           X00006200
+               LENGTH=22,                                              X00006300
+               ATTRB=(ASKIP,NORM),                                     X00006400
+               INITIAL='ORGANIZATION          '                         00006500
+ME00430  DFHMDF POS=(04,30),                                           X00006600
+               LENGTH=01,                                              X00006700
+               ATTRB=(ASKIP,NORM),                                     X00006800
+               INITIAL='('                                              00006900
+ME00432  DFHMDF POS=(04,32),                                           X00007000
+               LENGTH=03,                                              X00007100
+               ATTRB=(UNPROT,NUM,NORM),                                X00007200
+               PICIN='999',                                            X00007300
+               PICOUT='999'                                             00007400
+ME00436  DFHMDF POS=(04,36),                                           X00007500
+               LENGTH=01,                                              X00007600
+               ATTRB=(ASKIP,NORM),                                     X00007700
+               INITIAL=')'                                              00007800
+ME00501  DFHMDF POS=(05,01),                                           X00007900
+               LENGTH=22,                                              X00008000
+               ATTRB=(ASKIP,NORM),                                     X00008100
+               INITIAL='POST TO ACCOUNT NUMBER'                         00008200
+ME00530  DFHMDF POS=(05,30),                                           X00008300
+               LENGTH=01,                                              X00008400
+               ATTRB=(ASKIP,NORM),                                     X00008500
+               INITIAL='('                                              00008600
+ME00532  DFHMDF POS=(05,32),                                           X00008700
+               LENGTH=19,                                              X00008800
+               ATTRB=(UNPROT,NORM)                                      00008900
+ME00552  DFHMDF POS=(05,52),                                           X00009000
+               LENGTH=01,                                              X00009100
+               ATTRB=(ASKIP,NORM),                                     X00009200
+               INITIAL=')'                                              00009300
+ME00701  DFHMDF POS=(07,01),                                           X00009400
+               LENGTH=22,                                              X00009500
+               ATTRB=(ASKIP,NORM),                                     X00009600
+               INITIAL='CARD NUMBER           '                         00009700
+ME00730  DFHMDF POS=(07,30),                                           X00009800
+               LENGTH=01,                                              X00009900
+               ATTRB=(ASKIP,NORM),                                     X00010000
+               INITIAL='('                                              00010100
+ME00732  DFHMDF POS=(07,32),                                           X00010200
+               LENGTH=19,                                              X00010300
+               ATTRB=(UNPROT,NORM)                                      00010400
+ME00752  DFHMDF POS=(07,52),                                           X00010500
+               LENGTH=01,                                              X00010600
+               ATTRB=(ASKIP,NORM),                                     X00010700
+               INITIAL=')'                                              00010800
+ME00757  DFHMDF POS=(07,57),                               CDS2011     X00010805
+               LENGTH=09,                                  CDS2011     X00010810
+               ATTRB=(ASKIP,NORM),                         CDS2011     X00010815
+               INITIAL='CARD LOGO'                         CDS2011      00010820
+ME00767  DFHMDF POS=(07,67),                               CDS2011     X00010825
+               LENGTH=01,                                  CDS2011     X00010830
+               ATTRB=(ASKIP,NORM),                         CDS2011     X00010835
+               INITIAL='('                                 CDS2011      00010840
+ME00769  DFHMDF POS=(07,69),                               CDS2011     X00010845
+               LENGTH=03,                                  CDS2011     X00010850
+               ATTRB=(UNPROT,NUM,NORM),                    CDS2011      00010855
+ME00773  DFHMDF POS=(07,73),                               CDS2011     X00010860
+               LENGTH=01,                                  CDS2011     X00010865
+               ATTRB=(ASKIP,NORM),                         CDS2011     X00010870
+               INITIAL=')'                                 CDS2011      00010875
+ME00801  DFHMDF POS=(08,01),                                           X00010900
+               LENGTH=22,                                              X00011000
+               ATTRB=(ASKIP,NORM),                                     X00011100
+               INITIAL='RECORD NUMBER         '                         00011200
+ME00830  DFHMDF POS=(08,30),                                           X00011300
+               LENGTH=01,                                              X00011400
+               ATTRB=(ASKIP,NORM),                                     X00011500
+               INITIAL='('                                              00011600
+ME00832  DFHMDF POS=(08,32),                                           X00011700
+               LENGTH=04,                                              X00011800
+               ATTRB=(UNPROT,NUM,NORM),                                X00011900
+               PICIN='9999',                                           X00012000
+               PICOUT='9999'                                            00012100
+ME00837  DFHMDF POS=(08,37),                                           X00012200
+               LENGTH=01,                                              X00012300
+               ATTRB=(ASKIP,NORM),                                     X00012400
+               INITIAL=')'                                              00012500
+ME01001  DFHMDF POS=(10,01),                                           X00012600
+               LENGTH=15,                                              X00012700
+               ATTRB=(ASKIP,NORM),                                     X00012800
+               INITIAL='VIEW STATISTICS'                                00012900
+ME01030  DFHMDF POS=(10,30),                                           X00013000
+               LENGTH=01,                                              X00013100
+               ATTRB=(ASKIP,NORM),                                     X00013200
+               INITIAL='('                                              00013300
+ME01032  DFHMDF POS=(10,32),                                           X00013400
+               LENGTH=01,                                              X00013500
+               ATTRB=(UNPROT,NUM,NORM),                                X00013600
+               PICIN='9',                                              X00013700
+               PICOUT='9'                                               00013800
+ME01034  DFHMDF POS=(10,34),                                           X00013900
+               LENGTH=01,                                              X00014000
+               ATTRB=(ASKIP,NORM),                                     X00014100
+               INITIAL=')'                                              00014200
+ME01306  DFHMDF POS=(13,06),                                           X00014300
+               LENGTH=65,                                              X00014400
+               ATTRB=(ASKIP,NORM),                                     X00014500
+               INITIAL='                                               X00014600
+                                 '                                      00014700
+TTN2401  DFHMDF POS=(24,01),                                           X00014800
+               LENGTH=79,                                              X00014900
+               ATTRB=(ASKIP,NORM),                                     X00015000
+               INITIAL=' '                                              00015100
+*********************************************************************** 00015200
+         DFHMSD  TYPE=FINAL                                             00015300
+         END                                                            00015400
