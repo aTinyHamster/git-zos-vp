@@ -2,7 +2,7 @@
   "swagger" : "2.0",
   "info" : {
     "description" : "third ",
-    "version" : "1.0.4 Alwyn-to-Master",
+    "version" : "1.0.5 Alwyn-to-Master",
     "title" : "test-git-ar01"
   },
   "host" : "localhost:8080",
